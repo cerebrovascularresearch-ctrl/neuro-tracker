@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lyerly Neuro Tracker</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' https://fgmgultoqsywbehriyvr.supabase.co wss://fgmgultoqsywbehriyvr.supabase.co; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Project tracker for the Lyerly Neurosurgery research team">
+<meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Neuro Tracker">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="noTabs">
+<div id="screen" aria-live="polite"><div class="loading" aria-busy="true">Loading…</div></div>
+
+<nav class="tabbar" id="tabbar" aria-label="App sections" hidden><div class="in">
+  <a class="tab" href="#home" data-tab="home"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path class="f" d="M5 12.6 14 5l9 7.6V22a1.5 1.5 0 0 1-1.5 1.5H17v-6h-6v6H6.5A1.5 1.5 0 0 1 5 22z"/></svg>Today</a>
+  <a class="tab" href="#projects" data-tab="projects"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect class="f" x="4.5" y="5" width="19" height="18" rx="3.5"/><path d="M9 10.5h10M9 14h10M9 17.5h6" stroke-width="1.7" style="stroke:var(--tabline,currentColor)"/></svg>Projects</a>
+  <a class="tab" href="#deadlines" data-tab="deadlines"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="6" width="19" height="17.5" rx="3.5"/><path class="f" d="M4.5 9.5A3.5 3.5 0 0 1 8 6h12a3.5 3.5 0 0 1 3.5 3.5V11h-19z"/><path d="M9.5 4v4M18.5 4v4M9 15.5h2M13 15.5h2M17 15.5h2M9 19h2M13 19h2"/></svg>Deadlines</a>
+  <a class="tab" href="#team" data-tab="team"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle class="f" cx="11" cy="10" r="4"/><path class="f" d="M3.5 22.5c.7-4 3.6-6.3 7.5-6.3s6.8 2.3 7.5 6.3z"/><circle class="f" cx="19.5" cy="11" r="3"/><path d="M18.5 16.4c3.3-.4 5.6 1.6 6.2 5"/></svg>Team</a>
+</div></nav>
+
+<div id="sheetRoot"></div>
+
+<script defer src="vendor/supabase.js"></script>
+<script defer src="config.js"></script>
+<script defer src="backend.js"></script>
+<script defer src="app.js"></script>
+</body>
+</html>
